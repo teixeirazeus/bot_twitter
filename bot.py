@@ -21,7 +21,7 @@ for tweet in tweepy.Cursor(api.search_tweets, search).items(100):
     if tweet.user.id_str not in user_list.user_list:
       tweet.favorite()   
       api.update_status(status="@" + tweet.user.screen_name + comment, in_reply_to_status_id = tweet.id , auto_populate_reply_metadata=True)
-      user_list.add_user(tweet.user.id)
+      user_list.add_user(tweet.user.id_str)
     else:
        print("User already in list")
           
