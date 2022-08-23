@@ -1,6 +1,5 @@
 from keys import *
 import tweepy, time
-import json
 
 #Consumer Keys
 auth = tweepy.OAuthHandler(API_KEY, API_KEY_SECRET)
